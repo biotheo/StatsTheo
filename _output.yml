@@ -6,4 +6,4 @@ bookdown::gitbook:
         <li><a href="./">Statistics Notes by BioTheo</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    download: ["pdf", "epub"]
+        
