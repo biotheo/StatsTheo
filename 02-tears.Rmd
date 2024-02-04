@@ -1,0 +1,7 @@
+# Second Section
+
+seems interesting!
+
+This will be the introduction to R and stats analysis!
+
+[any text you want can go here](https://google.it).
