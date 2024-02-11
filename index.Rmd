@@ -4,17 +4,18 @@ author: "Matteo Angeli"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-# bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
+bibliography: "references.bib"    
+url: "https://biotheo.github.io/StatsTheo/"
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+  This notebook collects all my statistical analysis notes, from theory to code in R.
 link-citations: yes
 github-repo: biotheo/StatsTheo
 ---
 
-# Down the rabbit-hole
+# Welcome!
 
-this will be the first, introductive, page!
+I'm Matteo Angeli [@BioTheo](https://biotheo.github.io/), and I've a master's degree in Ecology.
+
+This notebook collects all my statistical analysis notes, from theory to code in R. Hope this could be helpful!
+

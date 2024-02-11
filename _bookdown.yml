@@ -5,4 +5,4 @@ edit: https://github.com/biotheo/StatsTheo/edit/main/%s
 view: https://github.com/biotheo/StatsTheo/blob/main/%s
 language:
   ui:
-    chapter_name: "Section "
+    chapter_name: "Sec. "
