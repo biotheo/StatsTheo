@@ -17,7 +17,7 @@ Now, we can build a **frequency distribution table**, adding the **Absolute Freq
 | 160 – 170                   | 7                      | 14%                    |
 | **Total**                   | 50                     | 100%                   |
 
-### Graphical representation of frequency distribution
+### Graphical representation
 
 It is important to graphically represent the data and group of data. In this case, frequency distribution can be presented in graphical form as: *histograms*, *bar plot* (or bar chart) and *pie plot*.
 
