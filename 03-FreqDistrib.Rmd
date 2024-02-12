@@ -49,4 +49,8 @@ ggplot(data_children, aes(x = children_height)) +
   xlab("Height") +
   ylab( "Number of children")
 ```
+Other charts used to represent the frequency are: barplots and pieplot*
 
+
+
+* Pieplot are often the worst choice, let's say that could be graphically pleasant if you need to show your research results to a non-specialized public. 
