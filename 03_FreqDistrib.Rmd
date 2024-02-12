@@ -1,0 +1,52 @@
+# The Basics: Visualization
+
+## Frequency Distribution
+
+The frequency of a value is the number of times it occurs in a dataset. A frequency distribution is the pattern of frequencies of a variable. It’s the number of times each possible value of a variable occurs in a dataset.
+
+*Example*: in a given dataset that record the height of 50 children, we can group the data in 6 height categories.
+
+Now, we can build a **frequency distribution table**, adding the **Absolute Frequency** (i.e. the number of children within each category) and the **Relative Frequency** (i.e. the percentage over the total). We will obtain...
+
+| **Height (cm) of children** | **Absolute frequency** | **Relative frequency** |
+|-----------------------------|------------------------|------------------------|
+| 120 – 130                   | 9                      | 18%                    |
+| 130 – 140                   | 10                     | 20%                    |
+| 140 – 150                   | 13                     | 26%                    |
+| 150 – 160                   | 11                     | 22%                    |
+| 160 – 170                   | 7                      | 14%                    |
+| **Total**                   | 50                     | 100%                   |
+
+### Graphical representation of frequency distribution
+
+It is important to graphically represent the data and group of data. In this case, frequency distribution can be presented in graphical form as: *histograms*, *bar plot* (or bar chart) and *pie plot*.
+
+**Histograms**
+
+A histogram is a type of graph in which each column represents a numeric variable, in particular that which is continuous and/or grouped.
+
+Other features:
+
+- The height of the column shows the frequency for a specific range of values.
+- Columns are usually of equal width, however a histogram may show data using unequal ranges (intervals) and therefore have columns of unequal width.
+- The values represented by each column must be mutually exclusive and exhaustive. Therefore, there are no spaces between columns and each observation can only ever belong in one column.
+
+```{r children_hist, echo=FALSE, message=FALSE, warning=FALSE}
+children_height<-c(120.0, 121.0, 122.0, 123.0, 124.0, 125.0, 126.0, 126.0, 126.0, 130.0, 130.0, 130.0, 130.0, 130.0, 135.0, 131.0, 136.0, 130.0, 138.0, 140.0, 144.0, 140.0, 143.0, 140.0, 140.0, 140.0, 140.0, 140.0, 140.0, 140.0, 141.0, 147.0, 150.0, 155.0, 150.0, 150.0, 150.1, 150.0, 151.0, 152.0, 150.0, 153.0, 156.0, 160.0, 167.0, 169.0, 161.0, 164.0, 163.0, 166.0)
+id_children<-c(1:50)
+data_children<-data.frame(id_children, children_height)
+# View(data_children)
+#hist(children, breaks=c(110, 120, 130, 140, 150, 160, 170), 
+     #main = "Frequency distribution of children's height",
+     #xlab = "Height",
+     #ylab = "Number of children",
+     #labels = T)
+
+library(ggplot2)
+ggplot(data_children, aes(x = children_height)) +
+  geom_histogram(color = "black", fill = "#00AFBB", bins = 5, alpha = 0.5) +
+  labs(title = "Frequency distribution of children's height") +
+  xlab("Height") +
+  ylab( "Number of children")
+```
+

@@ -1,5 +1,5 @@
 --- 
-title: "StatsTheo"
+title: "StatsTheo - Statistical Analysis Notes"
 author: "Matteo Angeli"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

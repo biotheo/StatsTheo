@@ -2,3 +2,10 @@ welcome
 the-basics
 types-of-data
 a-caucus-race-and-a-long-tale
+the-data-can-be-categorized-in-different-types.-in-this-case-we-will-describe
+the-basics-data
+qualitative-data
+quantitative-data
+the-basics-visualization
+frequency-distribution
+graphical-representation-of-frequency-distribution

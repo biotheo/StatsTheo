@@ -1,0 +1,64 @@
+# The Basics: Data
+
+## Types of DAta
+
+The data can be categorized in different types. Generally, the data can be divided in two main categories:
+
+### Qualitative data
+
+Definition: *is descriptive, expressed in terms of language rather than numerical values. This data describes information and cannot be measured or counted. It refers to the words or labels used to describe certain characteristics or traits. It focuses on describing an action, rather than measuring it.*
+
+Moreover, qualitative data can be divided in two sub-categories: Nominal and Ordinal.
+
+**Nominal**
+
+- Nominal data is qualitative data used to name or label variables without providing numeric values
+- Nominal variables are labeled into categories that do not overlap
+- The categories of nominal data are purely descriptive, that is, they do not possess any quantitative or numeric value. Nominal data can never be quantified 
+- In most cases, nominal data is alphabetical. 
+<!-- - Only mode can be calculated. -->
+
+*Examples*: 
+
+- Which state do you live in? (Italy, Germany, France, ...)
+- Preferred mode of Public Transport; Employment Status (employed, unemployed, retired)
+- Literary Genre (comedy, tragedy, drama, epic, satire).
+
+**Ordinal**
+
+- Ordinal data is a kind of qualitative data that groups variables into ordered categories, which have a natural order or rank based on some hierarchical scale, like from high to low.
+- Ordinal data are non-numeric or categorical but may use numerical figures as categorizing labels. 
+- Ordinal data is always ordered, but the values are not evenly distributed. The differences between the intervals are uneven or unknown. 
+<!-- - Median can be calculated. -->
+
+*Examples*: 
+- Rank economic status based on intervals: Poor or Low Income (€10K-€20K), Middle income (€20K-€35K), Wealthy (€35K-€100K).
+- Rate education level according to: Elementary, High School, College, Graduate, Post-graduate.
+- Company asking customers for Feedback, experience, or satisfaction on the scale: Very satisfied (5), Satisfied (4), Neutral (3), Dissatisfied (2), Very dissatisfied (1).
+
+### Quantitative data
+
+Definition: *any information that can be quantified — that is, numbers. If it can be counted or measured, and given a numerical value, it's quantitative in nature. Quantitative variables can tell you "how many," "how much," or "how often."*
+
+Moreover, qualitative data can be divided in two sub-categories: Discrete and Continuous.
+
+**Discrete**
+
+- When the variable is described through integers values.
+- They could be negative too, although is quite rare in nature.
+
+*Examples*: 
+- Age (only number of years)
+- Number of devices own
+- Sex
+
+**Continuous**
+
+- When the variable is described through decimal values (i.e. rational).
+- In a continuous variable, also integers values are included (e.g. 1 is considered as 1.00)
+
+*Examples*: 
+
+- Height
+- Daily home-work distance 
+- Liters of waters drunk

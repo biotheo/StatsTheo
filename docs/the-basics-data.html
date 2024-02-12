@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sec. 2 The Basics: Data | StatsTheo - Statistical Analysis Notes</title>
+  <meta name="description" content="This notebook collects all my statistical analysis notes, from theory to code in R." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Sec. 2 The Basics: Data | StatsTheo - Statistical Analysis Notes" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This notebook collects all my statistical analysis notes, from theory to code in R." />
+  <meta name="github-repo" content="biotheo/StatsTheo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sec. 2 The Basics: Data | StatsTheo - Statistical Analysis Notes" />
+  
+  <meta name="twitter:description" content="This notebook collects all my statistical analysis notes, from theory to code in R." />
+  
+
+<meta name="author" content="Matteo Angeli" />
+
+
+<meta name="date" content="2024-02-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="the-basics-visualization.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Notes by BioTheo</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome!</a></li>
+<li class="chapter" data-level="2" data-path="the-basics-data.html"><a href="the-basics-data.html"><i class="fa fa-check"></i><b>2</b> The Basics: Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics-data.html"><a href="the-basics-data.html#types-of-data"><i class="fa fa-check"></i><b>2.1</b> Types of DAta</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics-data.html"><a href="the-basics-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1.1</b> Qualitative data</a></li>
+<li class="chapter" data-level="2.1.2" data-path="the-basics-data.html"><a href="the-basics-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.1.2</b> Quantitative data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="the-basics-visualization.html"><a href="the-basics-visualization.html"><i class="fa fa-check"></i><b>3</b> The Basics: Visualization</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="the-basics-visualization.html"><a href="the-basics-visualization.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="the-basics-visualization.html"><a href="the-basics-visualization.html#graphical-representation-of-frequency-distribution"><i class="fa fa-check"></i><b>3.1.1</b> Graphical representation of frequency distribution</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">StatsTheo - Statistical Analysis Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-basics-data" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Sec. 2</span> The Basics: Data<a href="the-basics-data.html#the-basics-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="types-of-data" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Types of DAta<a href="the-basics-data.html#types-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data can be categorized in different types. Generally, the data can be divided in two main categories:</p>
+<div id="qualitative-data" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Qualitative data<a href="the-basics-data.html#qualitative-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Definition: <em>is descriptive, expressed in terms of language rather than numerical values. This data describes information and cannot be measured or counted. It refers to the words or labels used to describe certain characteristics or traits. It focuses on describing an action, rather than measuring it.</em></p>
+<p>Moreover, qualitative data can be divided in two sub-categories: Nominal and Ordinal.</p>
+<p><strong>Nominal</strong></p>
+<ul>
+<li>Nominal data is qualitative data used to name or label variables without providing numeric values</li>
+<li>Nominal variables are labeled into categories that do not overlap</li>
+<li>The categories of nominal data are purely descriptive, that is, they do not possess any quantitative or numeric value. Nominal data can never be quantified</li>
+<li>In most cases, nominal data is alphabetical.
+<!-- - Only mode can be calculated. --></li>
+</ul>
+<p><em>Examples</em>:</p>
+<ul>
+<li>Which state do you live in? (Italy, Germany, France, …)</li>
+<li>Preferred mode of Public Transport; Employment Status (employed, unemployed, retired)</li>
+<li>Literary Genre (comedy, tragedy, drama, epic, satire).</li>
+</ul>
+<p><strong>Ordinal</strong></p>
+<ul>
+<li>Ordinal data is a kind of qualitative data that groups variables into ordered categories, which have a natural order or rank based on some hierarchical scale, like from high to low.</li>
+<li>Ordinal data are non-numeric or categorical but may use numerical figures as categorizing labels.</li>
+<li>Ordinal data is always ordered, but the values are not evenly distributed. The differences between the intervals are uneven or unknown.
+<!-- - Median can be calculated. --></li>
+</ul>
+<p><em>Examples</em>:
+- Rank economic status based on intervals: Poor or Low Income (€10K-€20K), Middle income (€20K-€35K), Wealthy (€35K-€100K).
+- Rate education level according to: Elementary, High School, College, Graduate, Post-graduate.
+- Company asking customers for Feedback, experience, or satisfaction on the scale: Very satisfied (5), Satisfied (4), Neutral (3), Dissatisfied (2), Very dissatisfied (1).</p>
+</div>
+<div id="quantitative-data" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Quantitative data<a href="the-basics-data.html#quantitative-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Definition: <em>any information that can be quantified — that is, numbers. If it can be counted or measured, and given a numerical value, it’s quantitative in nature. Quantitative variables can tell you “how many,” “how much,” or “how often.”</em></p>
+<p>Moreover, qualitative data can be divided in two sub-categories: Discrete and Continuous.</p>
+<p><strong>Discrete</strong></p>
+<ul>
+<li>When the variable is described through integers values.</li>
+<li>They could be negative too, although is quite rare in nature.</li>
+</ul>
+<p><em>Examples</em>:
+- Age (only number of years)
+- Number of devices own
+- Sex</p>
+<p><strong>Continuous</strong></p>
+<ul>
+<li>When the variable is described through decimal values (i.e. rational).</li>
+<li>In a continuous variable, also integers values are included (e.g. 1 is considered as 1.00)</li>
+</ul>
+<p><em>Examples</em>:</p>
+<ul>
+<li>Height</li>
+<li>Daily home-work distance</li>
+<li>Liters of waters drunk</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-basics-visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/biotheo/StatsTheo/edit/main/02_DataType.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/biotheo/StatsTheo/blob/main/02_DataType.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
